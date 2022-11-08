@@ -3,12 +3,27 @@ import React, { useContext } from 'react';
 import { Container, Nav, Navbar, Button, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
+import './Header.css'
+
 
 const Header = () => {
 
-    const { info } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
+    console.log(user?.email);
+    console.log(user?.photoURL);
 
-    console.log(info);
+
+
+    const handelLogout = () => {
+        logOut().then(() => {
+
+        }).catch((error) => {
+            console.log(error.message);
+        })
+
+    }
+
+
 
 
 
@@ -16,7 +31,6 @@ const Header = () => {
         <div>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
-                    <Image className='icon m-3' src="" alt="" />
                     <Navbar.Brand href="#home"><Button>kahoot-Eduction-Zone </Button></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
@@ -28,19 +42,19 @@ const Header = () => {
 
                         </Nav>
                         <Nav>
-                            {/* {user?.uid ? <>
+                            {user?.uid ? <>
 
                                 <div>
                                     <spam className='text-danger mb-3'>{user.displayName}</spam>
-                                    <Image onMouseOver={notify} className='icon m-3' src={user?.photoURL} alt="" />
-                                    <Toaster />
-                                    <Button variant="outline-danger" onClick={handelLogOut}>Log-Out</Button>
+                                    <Image className='icon m-3' src={user?.photoURL} alt="" />
+
+                                    <Button variant="outline-danger" onClick={handelLogout}>Log-Out</Button>
                                 </div>
 
                             </> : <>
                                 <Nav.Link><Link to='/login'>Login</Link></Nav.Link>
                                 <Nav.Link><Link to='/register'>Register</Link></Nav.Link>
-                            </>} */}
+                            </>}
 
                             <Nav.Link eventKey={2} href="#memes">
                                 <Button variant="outline-primary">  dark/Light</Button>

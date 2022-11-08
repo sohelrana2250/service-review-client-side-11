@@ -1,12 +1,16 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
 
 const Register = () => {
 
     const { createUser, updateProfileInfo } = useContext(AuthContext);
+    const [Register, setRegister] = useState(false);
+    const [error, setError] = useState(null);
 
     const handelRegisterSubmit = (event) => {
+
 
         event.preventDefault();
         const element = event.target;
@@ -22,9 +26,11 @@ const Register = () => {
             const user = result.user;
             console.log(user);
             handelUpdateProfileInfo(name, PhotoURL);
+            setRegister(true);
+            setError('')
             element.reset();
         }).catch((error) => {
-            console.log(error.message);
+            setError(error.message);
         })
 
     }
@@ -74,14 +80,14 @@ const Register = () => {
                     <Form.Control type="password" name='password' placeholder="Password" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    {/* <p>If Your Account Exist Please  <Link to='/login'>Login</Link></p> */}
+                    <p>If Your Account Exist Please  <Link to='/login'>Login</Link></p>
                 </Form.Group>
                 <Button variant="primary" type="submit">
                     Register
                 </Button>
 
-                {/* <Form.Text className='fs-3 text-success'> {register ? 'Successfuly-Login' : ''}</Form.Text>
-            <Form.Text className='text-danger fs-2'>{error}</Form.Text> */}
+                <Form.Text className='fs-3 text-success'> {Register ? 'Successfuly-Register' : ''}</Form.Text>
+                <Form.Text className='text-danger fs-2'>{error}</Form.Text>
             </Form>
 
         </div>
