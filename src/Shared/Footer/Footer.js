@@ -1,6 +1,9 @@
 import React from 'react';
 
+
 const Footer = () => {
+
+
     return (
         <footer className=" h-none bg-dark rounded mt-5 d-flex justify-content-center align-items-center">
             <div className="text-center">

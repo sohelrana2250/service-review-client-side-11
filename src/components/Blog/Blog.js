@@ -1,7 +1,9 @@
 import React from 'react';
 import { Card, Accordion } from 'react-bootstrap';
+import useTitle from '../../Hook/useTitle';
 
 const Blog = () => {
+    useTitle('Blog');
     return (
         <div className='accordian-handel'>
             <Card className="text-center card-blog-section m-3">
