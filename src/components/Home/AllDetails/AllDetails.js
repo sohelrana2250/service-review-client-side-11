@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
+import useTitle from '../../../Hook/useTitle';
 import AllDetailsCard from './AllDetailsCard';
 
 const AllDetails = () => {
 
     const [alldetails, setAllDetails] = useState([]);
+    useTitle('Details-Page')
 
     useEffect(() => {
 
@@ -19,6 +21,7 @@ const AllDetails = () => {
 
     console.log(alldetails);
 
+    alldetails.sort((b, a) => a.price - b.price);
 
 
     return (

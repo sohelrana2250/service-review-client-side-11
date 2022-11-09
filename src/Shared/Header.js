@@ -44,6 +44,16 @@ const Header = () => {
                         </Nav>
                         <Nav>
                             {user?.uid ? <>
+                                <div>
+                                    <Nav className="me-auto mt-3">
+
+                                        <Nav.Link><Link to='/addServices'>Add-Services</Link></Nav.Link>
+                                        <Nav.Link><Link to='/review'>My-Review</Link></Nav.Link>
+
+
+
+                                    </Nav>
+                                </div>
 
                                 <div>
                                     <spam className='text-danger mb-3'>{user.displayName}</spam>
@@ -52,13 +62,14 @@ const Header = () => {
                                     <Button variant="outline-danger" onClick={handelLogout}>Log-Out</Button>
                                 </div>
 
+
                             </> : <>
                                 <Nav.Link><Link to='/login'>Login</Link></Nav.Link>
                                 <Nav.Link><Link to='/register'>Register</Link></Nav.Link>
                             </>}
 
                             <Nav.Link eventKey={2} href="#memes">
-                                <Button variant="outline-primary">  dark/Light</Button>
+
                             </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>

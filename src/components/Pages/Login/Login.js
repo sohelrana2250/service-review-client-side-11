@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
+import useTitle from '../../../Hook/useTitle';
 import GoogleLogIn from '../../SocalMedia/GoogleLogIn';
 
 const Login = () => {
@@ -9,6 +10,8 @@ const Login = () => {
     const { login } = useContext(AuthContext);
     const [Login, setLogain] = useState(false);
     const [error, setError] = useState(null);
+
+    useTitle('Login');
 
     const location = useLocation();
     let navigate = useNavigate();

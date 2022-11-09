@@ -5,7 +5,7 @@ import ReviewCrad from '../ReviewCard/ReviewCrad';
 
 const Review = () => {
 
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
 
     const [review, setReview] = useState([]);
 
@@ -16,6 +16,9 @@ const Review = () => {
                 authorization: `Bearer ${localStorage.getItem('token')}`
             }
         }).then((res) => {
+            if (res.status === 401 || res.status === 403) {
+                logOut()
+            }
             return res.json()
         }).then((data) => {
 
@@ -27,7 +30,7 @@ const Review = () => {
 
 
 
-    }, [user?.email])
+    }, [user?.email, logOut])
 
 
     //console.log(review);

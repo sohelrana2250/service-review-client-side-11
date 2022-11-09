@@ -4,10 +4,12 @@ import { Row, Button, Card, CardGroup, ListGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import pic1 from '../../../asseat/new.jpg'
 import Banner from '../Banner/Banner';
+import useTitle from '../../../Hook/useTitle';
 
 const Service = () => {
 
     const [services, setServices] = useState([]);
+    useTitle('Services');
 
     useEffect(() => {
 

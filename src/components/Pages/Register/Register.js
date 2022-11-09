@@ -2,12 +2,14 @@ import React, { useContext, useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
+import useTitle from '../../../Hook/useTitle';
 
 const Register = () => {
 
     const { createUser, updateProfileInfo } = useContext(AuthContext);
     const [Register, setRegister] = useState(false);
     const [error, setError] = useState(null);
+    useTitle('Register');
 
     const handelRegisterSubmit = (event) => {
 
