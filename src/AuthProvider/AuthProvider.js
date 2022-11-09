@@ -26,11 +26,12 @@ const AuthProvider = ({ children }) => {
     }
 
     const updateProfileInfo = (profile) => {
-
+        setLoading(true);
         return updateProfile(auth.currentUser, profile);
     }
 
     const login = (email, password) => {
+        setLoading(true);
 
         return signInWithEmailAndPassword(auth, email, password);
     }
@@ -50,6 +51,7 @@ const AuthProvider = ({ children }) => {
 
 
     const GoogleLogin = () => {
+        setLoading(true);
 
         return signInWithPopup(auth, GoogleProvider);
 

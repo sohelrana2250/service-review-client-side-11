@@ -1,6 +1,8 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import pic1 from '../../../asseat/new.jpg'
+import pic1 from '../../../asseat/new.jpg';
+import pic2 from '../../../asseat/pic1.jpg';
+import pic3 from '../../../asseat/pic2.jfif';
 
 
 const Banner = () => {
@@ -14,33 +16,33 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h3>Dental Veneers</h3>
+                        <p>Dental Veneers- Many people are discovering the benefits of veneers. Veneers are thin coverings that are placed over the front part of the teeth.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src={pic1}
+                        src={pic2}
                         alt="Second slide"
                     />
 
                     <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h3>Root Canal Therapy</h3>
+                        <p>Root Canal Therapy- In the past, diseased teeth often had to be extracted. Today, they often can be saved through root canal therapy.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src={pic1}
+                        src={pic3}
                         alt="Third slide"
                     />
 
                     <Carousel.Caption>
-                        <h3>Third slide label</h3>
+                        <h3> Dental Veneers</h3>
                         <p>
-                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                            Dental Veneers- Many people are discovering the benefits of veneers. Veneers are thin coverings that are placed over the front part of the teeth.
                         </p>
                     </Carousel.Caption>
                 </Carousel.Item>

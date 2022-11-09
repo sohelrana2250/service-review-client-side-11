@@ -1,6 +1,13 @@
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
+import toast, { Toaster } from 'react-hot-toast';
+import useTitle from '../../../Hook/useTitle';
+
+
 const AddServices = () => {
+
+    const notify = () => toast('Successfully-Service-loaded');
+    useTitle('Add-Services');
 
     const handelAddService = (event) => {
         event.preventDefault();
@@ -78,10 +85,10 @@ const AddServices = () => {
                     <Form.Control type="text" name='discription' placeholder="Services-Decription" required />
                 </Form.Group>
 
-                <Button variant="primary" type="submit">
+                <Button onClick={notify} variant="primary" type="submit">
                     Add-Services
                 </Button>
-
+                <Toaster />
 
             </Form>
 

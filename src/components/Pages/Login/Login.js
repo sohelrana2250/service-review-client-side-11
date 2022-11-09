@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import useTitle from '../../../Hook/useTitle';
 import GoogleLogIn from '../../SocalMedia/GoogleLogIn';
@@ -86,7 +86,7 @@ const Login = () => {
                     <Form.Control type="password" name='password' placeholder="Password" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    {/* <p className='text-danger'>Please Register Your Account Info <Link to='/register'>Register</Link></p> */}
+                    <p className='text-danger'>Please Register then added a review <Link to='/register'>Register</Link></p>
                 </Form.Group>
                 <Button variant="outline-danger" className='pl-3 fs-5' type="submit">
                     Login
