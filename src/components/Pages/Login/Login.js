@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
+import GoogleLogIn from '../../SocalMedia/GoogleLogIn';
 
 const Login = () => {
 
@@ -28,13 +29,43 @@ const Login = () => {
             setLogain(true);
             setError('');
             element.reset();
-            navigate(from, { replace: true });
+            //get jwt
+
+            const currentUser = {
+                email: user.email
+            }
+
+            fetch('http://localhost:5008/jwt', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(currentUser)
+            }).then((res) => res.json()).then((data) => {
+                console.log(data);
+                localStorage.setItem('token', data.token);
+                navigate(from, { replace: true });
+            }).catch((error) => {
+                console.error(error.message);
+            })
+
+
+
+
+
+
 
         }).catch((error) => {
             setError(error.message);
         })
 
     }
+
+
+
+
+
+
+
+
 
 
 
@@ -59,8 +90,8 @@ const Login = () => {
                 </Button>
 
                 <Form.Group className='mt-3'>
-                    <><Button className='me-3 mt-3 fs-5' variant="outline-danger">  Login-With-Google</Button>
-                    </>
+                    <GoogleLogIn></GoogleLogIn>
+
                 </Form.Group>
 
                 <Form.Text className='fs-3 text-success'> {Login ? 'Successfuly-Login' : ''}</Form.Text>

@@ -11,8 +11,16 @@ const Review = () => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:5008/review?email=${user?.email}`).then((res) => res.json()).then((data) => {
+        fetch(`http://localhost:5008/review?email=${user?.email}`, {
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('token')}`
+            }
+        }).then((res) => {
+            return res.json()
+        }).then((data) => {
+
             setReview(data);
+
         }).catch((error) => {
             console.error(error.message);
         })
