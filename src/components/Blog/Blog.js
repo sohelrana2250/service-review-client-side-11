@@ -39,23 +39,15 @@ const Blog = () => {
                             </Accordion.Item>
 
                             <Accordion.Item eventKey="2">
-                                <Accordion.Header> Why are you using firebase? What other options do you have to implement authentication?</Accordion.Header>
+                                <Accordion.Header> What is the difference between javascript and NodeJS?</Accordion.Header>
                                 <Accordion.Body>
                                     <Card.Text className='fs-5'>
 
 
-                                        Firebase Authentication provides backend services, easy-to-use SDKs, and ready-made UI libraries to authenticate users to your app. It supports authentication using passwords, phone numbers, popular federated identity providers like Google, Facebook and Twitter, and more.
+                                        JavaScript is a simple programming language that can be used with any browser that has the JavaScript Engine installed. Node. js, on the other hand, is an interpreter or execution environment for the JavaScript programming language.
 
                                         <Card.Text>
-                                            1. On this page.
-                                            2.  Add and initialize the 3. Authentication SDK.
-                                            3. Prototype and test with Firebase Local Emulator Suite.
-                                            4.  Sign up new users.
-                                            5.   Sign in existing users.
-                                            6.   Set an authentication state observer and get user data.
-                                            7. Next steps.
-
-                                            Firebase Authentication aims to make building secure authentication systems easy, while improving the sign-in and onboarding experience for end users. It provides an end-to-end identity solution, supporting email and password accounts, phone auth, and Google, Twitter, Facebook, and GitHub login, and more.
+                                            Node. js is sometimes misunderstood by developers as a backend framework that is exclusively used to construct servers. This is not the case; Node. js can be used on the frontend as well as the backend. Node. js is a cross-platform JavaScript runtime environment for servers and applications.
                                         </Card.Text>
                                     </Card.Text>
 
