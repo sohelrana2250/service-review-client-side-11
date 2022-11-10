@@ -13,12 +13,12 @@ const Blog = () => {
                     <Card.Text>
                         <Accordion defaultActiveKey={['0']} alwaysOpen>
                             <Accordion.Item eventKey="0">
-                                <Accordion.Header>What is Node? How does Node work?</Accordion.Header>
+                                <Accordion.Header>Difference between SQL and NoSQL</Accordion.Header>
                                 <Accordion.Body>
                                     <Card.Text className='fs-5'>
-                                        Node. js is a JavaScript runtime environment that achieves low latency and high throughput by taking a “non-blocking” approach to serving requests. In other words, Node. js wastes no time or resources on waiting for I/O requests to return.
+                                        SQL is the programming language used to interface with relational databases. Relational databases model data as records in rows and tables with logical links between them. NoSQL is a class of DBMs that are non-relational and generally do not use SQL.
 
-                                        <Card.Text>It is a used as backend service where javascript works on the server-side of the application. This way javascript is used on both frontend and backend. Node. js runs on chrome v8 engine which converts javascript code into machine code, it is highly scalable, lightweight, fast, and data-intensive. Working of Node.Node is completely event-driven. Basically the server consists of one thread processing one event after another. A new request coming in is one kind of event. The server starts processing it and when there is a blocking IO operation, it does not wait until it completes and instead registers a callback function.</Card.Text>
+                                        <Card.Text>SQL databases are efficient at processing queries and joining data across tables, making it easier to perform complex queries against structured data, including ad hoc requests. NoSQL databases lack consistency across products and typically require more work to query data, particular as query complexity increases</Card.Text>
 
 
                                     </Card.Text>
