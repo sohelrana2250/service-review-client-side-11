@@ -8,12 +8,14 @@ import useTitle from '../../../Hook/useTitle';
 
 const Service = () => {
 
+    //https://b6a11-service-review-cli-b4678.web.app
+
     const [services, setServices] = useState([]);
     useTitle('Services');
 
     useEffect(() => {
 
-        fetch('http://localhost:5008/service').then((res) => res.json()).then((data) => {
+        fetch('https://b6a11-service-review-server-side-two.vercel.app/service').then((res) => res.json()).then((data) => {
             setServices(data);
         }).catch((error) => {
             console.error(error.message);

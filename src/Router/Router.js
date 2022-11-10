@@ -30,7 +30,7 @@ export const router = createBrowserRouter([
             {
                 path: '/allDeatis/:id',
                 element: <PrivateRoute> <ServiceDetails></ServiceDetails></PrivateRoute>,
-                loader: (props) => { return fetch(`http://localhost:5008/serviceDetails/${props.params.id}`) }
+                loader: (props) => { return fetch(`https://b6a11-service-review-server-side-two.vercel.app/serviceDetails/${props.params.id}`) }
             },
             {
                 path: '/review', element: <PrivateRoute><Review></Review></PrivateRoute>
@@ -38,7 +38,7 @@ export const router = createBrowserRouter([
             {
                 path: '/reviewUpdate/:id',
                 element: <ReviewUpdate></ReviewUpdate>,
-                loader: (props) => { return fetch(`http://localhost:5008/updateReview/${props.params.id}`) }
+                loader: (props) => { return fetch(`https://b6a11-service-review-server-side-two.vercel.app/updateReview/${props.params.id}`) }
 
             },
             {

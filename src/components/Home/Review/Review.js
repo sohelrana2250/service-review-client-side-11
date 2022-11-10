@@ -11,7 +11,7 @@ const Review = () => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:5008/review?email=${user?.email}`, {
+        fetch(`https://b6a11-service-review-server-side-two.vercel.app/review?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('token')}`
             }
@@ -41,7 +41,7 @@ const Review = () => {
         const process = window.confirm('Are You sure,You Want to Delete Information');
         if (process) {
 
-            fetch(`http://localhost:5008/review/${id}`, {
+            fetch(`https://b6a11-service-review-server-side-two.vercel.app/review/${id}`, {
 
                 method: 'DELETE'
             }).then((res) => res.json()).then((data) => {

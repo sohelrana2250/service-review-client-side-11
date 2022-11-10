@@ -24,7 +24,7 @@ const AddServices = () => {
             title, price, ratings, img, discription
         }
 
-        fetch('http://localhost:5008/addService', {
+        fetch('https://b6a11-service-review-server-side-two.vercel.app/addService', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

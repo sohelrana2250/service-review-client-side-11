@@ -38,7 +38,7 @@ const ServiceDetails = () => {
 
         console.log(reviewInfo);
 
-        fetch('http://localhost:5008/review', {
+        fetch('https://b6a11-service-review-server-side-two.vercel.app/review', {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',

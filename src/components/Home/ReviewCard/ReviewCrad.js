@@ -11,7 +11,7 @@ const ReviewCrad = ({ review, handelDelete }) => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:5008/serviceDetails/${ReviewId}`).then((res) => res.json()).then((data) => {
+        fetch(`https://b6a11-service-review-server-side-two.vercel.app/serviceDetails/${ReviewId}`).then((res) => res.json()).then((data) => {
 
             setDentalService(data);
         }).catch((error) => {
