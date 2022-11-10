@@ -8,7 +8,7 @@ import useTitle from '../../../Hook/useTitle';
 
 const Service = () => {
 
-    //https://b6a11-service-review-cli-b4678.web.app
+    //https://b6a11-service-review-cli-b4678.firebaseapp.com/
 
     const [services, setServices] = useState([]);
     useTitle('Services');
