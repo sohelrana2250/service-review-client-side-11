@@ -25,12 +25,15 @@ const Blog = () => {
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="1">
-                                <Accordion.Header> what is cors?</Accordion.Header>
+                                <Accordion.Header> What is JWT, and how does it work?</Accordion.Header>
                                 <Accordion.Body>
                                     <Card.Text className='fs-5'>
-                                        CORS stands for Cross-Origin Resource Sharing . It allows us to relax the security applied to an API. This is done by bypassing the Access-Control-Allow-Origin headers, which specify which origins can access the API.
+                                        SON Web Token (JWT) is an open standard (RFC 7519) for securely transmitting information between parties as JSON object. It is compact, readable and digitally signed using a private key/ or a public key pair by the Identity Provider(IdP).
 
-                                        <Card.Text>Cross-Origin Resource Sharing CORS is an HTTP-header based mechanism that allows a server to indicate any origins domain, scheme, or port other than its own from which a browser should permit loading resources.Run the server with npm nodemon . Navigate to http://localhost:6069/ingredients on your browser. You will be served with these ingredients text items. In this example, cross-origin is allowed because you're currently on the same domain, and you are executing this request from the same domain.</Card.Text>
+                                        <Card.Text>Figure 1 shows that a JWT consists of three parts: a header, payload, and signature.
+
+                                            JWTs are a good way of securely transmitting information between parties because they can be signed, which means you can be sure that the senders are who they say they are. Additionally, the structure of a JWT allows you to verify that the content hasn't been tampered with.
+                                        </Card.Text>
                                     </Card.Text>
                                 </Accordion.Body>
                             </Accordion.Item>
