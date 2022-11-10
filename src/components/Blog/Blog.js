@@ -59,15 +59,15 @@ const Blog = () => {
 
 
                             <Accordion.Item eventKey="3">
-                                <Accordion.Header>How does the private route work?</Accordion.Header>
+                                <Accordion.Header>How does NodeJS handle multiple requests at the same time?</Accordion.Header>
                                 <Accordion.Body>
                                     <Card.Text className='fs-5'>
 
 
-                                        The private route component is similar to the public route, the only change is that redirect URL and authenticate condition. If the user is not authenticated he will be redirected to the login page and the user can only access the authenticated routes If he is authenticated
+                                        How NodeJS handle multiple client requests? NodeJS receives multiple client requests and places them into EventQueue. NodeJS is built with the concept of event-driven architecture. NodeJS has its own EventLoop which is an infinite loop that receives requests and processes them.
 
                                         <Card.Text>
-                                            Protected routes are those routes that only grant access to authorized users. This means that users must first meet certain conditions before accessing that specific route. For instance, your application can require only logged-in users be able to visit the dashboard page.
+                                            As is, node. js can process upwards of 1000 requests per second and speed limited only to the speed of your network card. Node. js falls into the category of concurrent computation. This is a direct result of the single-threaded event loop being the backbone of a Node. js application.
                                         </Card.Text>
                                     </Card.Text>
 
